@@ -10,32 +10,21 @@ namespace WpfApplication1
 {
    public class Investor
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public float Summ { get; set; }
-        public string City { get; set; }
+        public string FirstName;
+        public string LastName;
+        public float Summ;
+        public string City;
 
-        private ObservableCollection<Investor> _investorsList = null;
-        public ObservableCollection<Investor> InvestorsList
+        public Investor(string FirstName, string LastName, float Summ, string City)
         {
-            get
-            {
-                if(_investorsList!= null)
-                {
-                    return _investorsList;
-                }
-                _investorsList = new ObservableCollection<Investor>();
-                _investorsList.Add(new Investor()
-                {
-                    FirstName = "Jhon",
-                    LastName = "Doe",
-                    Summ = 100000,
-                    City = "Budapesht"
-                });
-                return _investorsList;
-            }
-
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.Summ = Summ;
+            this.City = City;
         }
+
 
     }
 }
+
+
